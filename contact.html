@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name=v"iewport" content="width=device-width, initial-scale=1.0">
+    <title>The Sensors</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="logo.jpg" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <style>
+      .navbar {
+        display: flex;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="loader"></div>
+
+    <section class="header">
+      <video autoplay muted loop plays-inline class="video">
+        <source src="video.mp4" type="video/mp4" />
+      </video>
+      <div class="navbar">
+        <div class="container">
+          <div class="btn" style="display: flex; justify-content: center">
+            <a href="home.html" style="text-align: center">BACK</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-box2">
+        <h1>Contact Us</h1>
+      </div>
+
+      <div class="contact-container">
+        <form
+          action="https://api.web3forms.com/submit"
+          method="POST"
+          class="contact-left">
+          <div class="contact-left-tittle">
+            <h2>Get in touch</h2>
+            <hr />
+          </div>
+          <input
+            type="hidden"
+            name="access_key"
+            value="7c261ce6-1ff1-4690-853b-bb5dac30f17a" />
+          <input
+            type="text"
+            name="name"
+            placeholder="Enter Your Name"
+            class="contact-input"
+            required />
+          <input
+            type="email"
+            name="email"
+            placeholder="Enter Your Email"
+            class="contact-input"
+            required />
+          <textarea
+            name="message"
+            placeholder="Enter Your Message"
+            class="contact-inputs"
+            required></textarea>
+          <button class="shadow__btn">SUBMIT</button>
+        </form>
+        <div class="contact-right">
+          <img src="contact-new.png" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <script type="text/javascript" src="script.js"></script>
+    <script src="vanilla-tilt.js"></script>
+  </body>
+</html>
