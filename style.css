@@ -596,7 +596,7 @@ nav-links a:hover {
 
 .project .project_card {
   position: relative;
-  width: 730px;
+  width: 600px;
   height: 350px;
   margin: 20px;
   display: flex;
@@ -613,16 +613,16 @@ nav-links a:hover {
 
 .project .project_card img {
   position: absolute;
-  top: -60px;
+  top: 25%;
   left: 50%;
   transform: translateX(-50%);
-  height: 400px;
+  height: 200px;
   transition: 0.5s;
 }
 
 .project .project_card:hover img {
   left: 80%;
-  height: 400px;
+  height: 200px;
 }
 
 .project .project_card .content {
@@ -1100,7 +1100,7 @@ textarea {
 @media (max-width: 700px) {
   .project .project_card {
     display: flex;
-    width: auto;
+    width: 100%;
     max-width: 550px;
     align-items: flex-start;
   }
@@ -1110,19 +1110,22 @@ textarea {
     flex-direction: column;
   }
   .project .project_card:hover {
-    height: 400px;
+    height: 450px;
   }
 
   .project .project_card:hover img {
     left: 50%;
-    height: 400px;
-    width: 300px;
+    margin-top: 130px;
   }
 
   .project .project_card .content {
     width: 100%;
     left: 0;
     padding: 20px;
+  }
+
+  .project .project_card .content p{
+    padding-right: 40px;
   }
 
   .About .About_card {
