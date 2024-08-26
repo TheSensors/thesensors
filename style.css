@@ -1133,6 +1133,7 @@ textarea {
   .project .project_card .content p{
     padding-right: 40px;
   }
+  
 
   .About .About_card {
     height: 650px;
@@ -1141,7 +1142,7 @@ textarea {
   }
 
   .About_card p {
-    width: 280px;
+    width: 290px;
     font-size: 15px;
   }
 
