@@ -317,7 +317,7 @@ nav-links a:hover {
     text-align: center;
     margin-top: 100px;
     position: absolute;
-    left: 60%;
+    left: 50%;
   }
   .text-box2 {
     position: relative;
@@ -909,7 +909,6 @@ h4 {
 .About {
   display: flex;
   justify-content: center;
-  height: 100vh;
   margin-top: 50px;
 }
 
@@ -974,8 +973,9 @@ h4 {
   fill: white; /* Ensure icons are white */
 }
 
+
 .About_card .sociall {
-  margin-top: 370px;
+  margin-top: 350px;
   width: 100%;
   display: flex;
   align-items: center;
@@ -987,10 +987,16 @@ h4 {
     justify-content: center;
     align-items: center;
   }
+
   .About_card p {
     width: 380px;
     font-size: 12px;
   }
+
+  .About_card .sociall{
+    margin-top: 530px;
+  }
+
 }
 .contact {
   margin: 100px auto;
@@ -1129,13 +1135,14 @@ textarea {
   }
 
   .About .About_card {
-    height: 500px;
+    height: 650px;
     display: flex;
     justify-content: center;
   }
 
   .About_card p {
-    width: 260px;
+    width: 280px;
+    font-size: 15px;
   }
 
   .text-box {
