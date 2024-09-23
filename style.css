@@ -538,7 +538,7 @@ nav-links a:hover {
 }
 
 .gallery {
-  min-height: 90vh;
+  min-height: 65vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -547,7 +547,7 @@ nav-links a:hover {
 
 .slider {
   position: relative;
-  width: 200px;
+  width: 270px;
   height: 200px;
   transform-style: preserve-3d;
   animation: rotate 30s linear infinite;
