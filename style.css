@@ -330,6 +330,13 @@ nav-links a:hover {
     left: 24px;
     top: 50px;
   }
+
+  .text-box3 {
+    position: relative;
+    left: 4px;
+    top: 50px;
+  }
+  
 }
 
 
@@ -360,6 +367,20 @@ nav-links a:hover {
   outline: none;
   animation: animate 5s linear infinite;
 }
+
+.text-box3 h1 {
+  font-size: 20px;
+  font-weight: bold;
+  position: relative;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+  width: 100%;
+  text-align: center;
+  
+  outline: none;
+  animation: animate 5s linear infinite;
+}
+
 @media screen and (max-width: 600px) {
   .text-box h1 {
     font-size: 100px;
@@ -609,10 +630,10 @@ nav-links a:hover {
   transition: 0.5s;
   justify-content: flex-start;
   align-items: center;
-  background: rgba(255, 255, 255, 0.25);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(4.5px);
-  -webkit-backdrop-filter: blur(4.5px);
+  background: rgba( 255, 255, 255, 0.05 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 6.5px );
+  -webkit-backdrop-filter: blur( 6.5px );
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
@@ -931,9 +952,10 @@ h4 {
   transition: 0.5s;
   justify-content: flex-start;
   align-items: center;
-  backdrop-filter: blur(16px) saturate(180%);
-  -webkit-backdrop-filter: blur(16px) saturate(180%);
-  background-color: rgba(255, 255, 255, 0.3);
+  background: rgba( 255, 255, 255, 0.05 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 6.5px );
+-webkit-backdrop-filter: blur( 6.5px );
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
@@ -1290,4 +1312,155 @@ textarea {
   display: none;
 }
 
+.gallery-main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; /* Adjust spacing between cards */
+  padding: 20px;
+  margin-top: 50px;
+}
+
+.gallery-card {
+  display: flex;
+  flex-direction: column;
+  width: 100%; /* Make cards responsive */
+  max-width: 300px; /* Set a maximum width for cards */
+  height: auto; /* Allow cards to adjust height */
+  max-height: 330px;
+  overflow: hidden;
+  transition: all 0.3s;
+  cursor: pointer;
+  box-sizing: border-box;
+  padding: 10px;
+  background: rgba( 255, 255, 255, 0.05 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 6.5px );
+-webkit-backdrop-filter: blur( 6.5px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+.gallery-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.1),
+          -4px -4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.gallery-card-image-container {
+  width: 100%;
+  height: 64%;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  overflow: hidden;
+  background-color: rgb(182, 1, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.video-icon-img {
+  width: 100%; /* Adjust this as needed */
+  height: 150px; /* Maintains the aspect ratio */
+  display: block; /* Prevents any extra spacing */
+}
+
+
+
+.gallery-card-title {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 600;
+  color: #ffffff;
+  cursor: default;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+}
+
+.gallery-card-des {
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  margin: 2px;
+  font-size: 12px;
+  color: #ffffff;
+  cursor: default;
+}
+
+.gallery-card-btn {
+  font-size: 15px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #12bde7;
+  width: 25px;
+  height: 25px;
+  max-height: 25px;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all ease-in-out 0.5s;
+  gap: 1px;
+  box-sizing: border-box;
+  padding-left: 5px;
+  margin-top: 8px;
+  animation: glow 0.5s infinite alternate; /* Glow animation */
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 10px #12bde7; /* Initial glow */
+  }
+  100% {
+    box-shadow: 0 0 30px #ffffff; /* Full glow */
+  }
+}
+
+.gallery-card-btn:hover {
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.06);
+  width: 100%;
+  border-radius: 8px;
+  height: 30px;
+  gap: 10px;
+  padding: 0;
+}
+
+.gallery-card-btn-text {
+  opacity: 0;
+  font-size: 1px;
+  font-weight: 500;
+  transition: all ease-in-out 0.5s;
+}
+
+.gallery-card-btn-text a{
+  text-decoration: none;
+  color: #fff;
+}
+
+.gallery-card-btn:hover > .gallery-card-btn-text {
+  opacity: 1;
+  font-size: 15px;
+}
+
+@media screen and (max-width: 1024px) {
+  .gallery-card {
+    flex: 1 1 calc(50% - 40px); /* Two cards per row */
+    max-width: calc(50% - 40px);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .gallery-card {
+    flex: 1 1 100%; /* Single card per row */
+    max-width: 100%;
+  }
+}
 
