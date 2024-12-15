@@ -20,14 +20,24 @@
     </style>
   </head>
   <body>
+
+    <div class="error-container" id="errorContainer">
+      <h1>404 - Internet Connection Lost</h1>
+      <p>It seems like you've lost your internet connection.</p>
+      <button class="retry-btn" onclick="reloadPage()">Reload</button>
+    </div>
+
     <section class="header">
       <video autoplay muted loop plays-inline class="video">
         <source src="front.mp4" type="video/mp4" />
       </video>
+      
 
       <div class="logoImage">
         <img src="logo.jpg" alt="the sensors" />
       </div>
+
+      
 
       <div class="navbar">
         <div class="enter">
@@ -36,6 +46,12 @@
           </div>
         </div>
       </div>
+
+      
     </section>
+
+    <script type="text/javascript" src="error.js"></script>
+    <script src="https://kit.fontawesome.com/16539b20e1.js" crossorigin="anonymous"></script>
+    
   </body>
 </html>
