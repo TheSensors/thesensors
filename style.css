@@ -1035,8 +1035,8 @@ backdrop-filter: blur( 6.5px );
 }
 @media (max-width: 768px){
   .contact-container {
-    margin-top: -100px;
-    margin-left: 50px;
+    margin-top: -60px;
+    margin-left: 20px;
   }
 }
 
@@ -1394,25 +1394,34 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
 
 .gallery-card-btn {
   font-size: 15px;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   color: #fff;
   cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #12bde7;
-  width: 25px;
+  width: 150px;
   height: 25px;
   max-height: 25px;
   border-radius: 10px;
   overflow: hidden;
-  transition: all ease-in-out 0.5s;
   gap: 1px;
   box-sizing: border-box;
   padding-left: 5px;
   margin-top: 8px;
   animation: glow 0.5s infinite alternate; /* Glow animation */
+  
+}
+
+.gallery-card-btn:hover{
+  background-color: #009bc2;
+  transition: 0.1s;
+}
+
+
+.gallery-card-btn a{
+  text-decoration: none;
+  color: #fff;
 }
 
 @keyframes glow {
@@ -1420,18 +1429,11 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
     box-shadow: 0 0 10px #12bde7; /* Initial glow */
   }
   100% {
-    box-shadow: 0 0 30px #ffffff; /* Full glow */
+    box-shadow: 0 0 30px #12bde7; /* Full glow */
   }
 }
 
-.gallery-card-btn:hover {
-  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.06);
-  width: 100%;
-  border-radius: 8px;
-  height: 30px;
-  gap: 10px;
-  padding: 0;
-}
+
 
 .gallery-card-btn-text {
   opacity: 0;
@@ -1445,10 +1447,7 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
   color: #fff;
 }
 
-.gallery-card-btn:hover > .gallery-card-btn-text {
-  opacity: 1;
-  font-size: 15px;
-}
+
 
 @media screen and (max-width: 1024px) {
   .gallery-card {
@@ -1462,5 +1461,60 @@ border: 1px solid rgba( 255, 255, 255, 0.18 );
     flex: 1 1 100%; /* Single card per row */
     max-width: 100%;
   }
+}
+
+
+.project-add {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  cursor: pointer;
+  background-color: #00ccff;
+  width: 230px;
+  height: 50px;
+  max-height: 50px;
+  border-radius: 10px;
+  padding-left: 5px;
+  margin-top: 15px;
+  margin-bottom: 100px;
+  animation: glow 0.5s infinite alternate; /* Glow animation */
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 10px #12bde7; /* Initial glow */
+  }
+  100% {
+    box-shadow: 0 0 30px #12bde7; /* Full glow */
+  }
+}
+
+.project-add a{
+  color: #fff;
+  font-weight: bold
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.project-add i{
+  margin-right: 10px;
+}
+
+@media screen and (max-width: 1024px) {
+  
+    .project-add {
+    width: 200px; /* Adjust width for smaller screens */
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+  .project-add a{
+    font-size: 14px;
+  }
+
 }
 
