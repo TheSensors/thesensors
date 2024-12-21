@@ -16,6 +16,134 @@
         position: fixed;
         bottom: 1px;
       }
+
+    h1 {
+      margin-bottom: 20px;
+      font-size: 2rem;
+      text-align: center;
+    }
+    /* Modal for Thumbnail Gallery */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      z-index: 1000;
+      overflow-y: auto;
+    }
+
+    .modal-content {
+      margin-top: 80px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 20px;
+      gap: 25px;
+    }
+
+    .modal-content img {
+      width: 300px;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .modal-content img:hover {
+      transform: scale(1.1);
+    }
+
+    .modal .close {
+      position: fixed;
+      top: 20px;
+      right: 30px;
+      font-size: 30px;
+      color: white;
+      cursor: pointer;
+      transition: color 0.3s;
+    }
+
+    .modal .close:hover {
+      color: #ff4c4c;
+    }
+
+    /* Full-Screen View */
+    .fullscreen {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.95);
+      justify-content: center;
+      align-items: center;
+      z-index: 2000;
+    }
+
+    .fullscreen img {
+      max-width: 90%;
+      max-height: 90%;
+      animation: fadeIn 0.5s;
+      object-fit: contain;
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    .fullscreen .close-fullscreen {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 30px;
+      color: white;
+      cursor: pointer;
+      transition: color 0.3s;
+    }
+
+    .fullscreen .close-fullscreen:hover {
+      color: #ff4c4c;
+    }
+
+    /* Navigation Buttons */
+    .fullscreen .nav-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 40px;
+      color: white;
+      background: rgba(0, 0, 0, 0.5);
+      border: none;
+      border-radius: 5px;
+      padding: 10px 20px;
+      cursor: pointer;
+      transition: background 0.3s;
+      user-select: none;
+    }
+
+    .fullscreen .nav-btn:hover {
+      background: rgba(0, 0, 0, 0.8);
+    }
+
+    .fullscreen .prev {
+      left: 20px;
+    }
+
+    .fullscreen .next {
+      right: 20px;
+    }
     </style>
   </head>
   <body>
@@ -94,7 +222,7 @@
         <div class="gallery-card-btn">
           <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 384 512" stroke-width="0" fill="currentColor" stroke="currentColor">
             <path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"></path>
-            <p><a href="bitgallery.html">View Photos</a></p>
+            <p><a class="open-gallery-btn" data-gallery="gallerybit">View Photos</a></p>
           </svg>
         </div>
       </div>
@@ -106,7 +234,7 @@
         <div class="gallery-card-btn">
           <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 384 512" stroke-width="0" fill="currentColor" stroke="currentColor">
             <path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"></path>
-            <p><a href="sihgallery.html">View Photos</a></p>
+            <p><a class="open-gallery-btn" data-gallery="gallerysih">View Photos</a></p>
           </svg>
         </div>
       </div>
@@ -118,19 +246,169 @@
         <div class="gallery-card-btn">
           <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 384 512" stroke-width="0" fill="currentColor" stroke="currentColor">
             <path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"></path>
-            <p><a href="iitgallery.html">View Photos</a></p>
+            <p><a class="open-gallery-btn" data-gallery="galleryiit">View Photos</a></p>
           </svg>
         </div>
       </div>
-      
-      
+      <div class="button-container">
+      <!-- Modal for Thumbnail Gallery -->
+      <div class="modal" id="thumbnailModal">
+        <span class="close" id="closeThumbnail">&times;</span>
+        <div class="modal-content"></div>
+      </div>
+    
+      <!-- Full-Screen Image Viewer -->
+      <div class="fullscreen" id="fullscreenModal">
+        <span class="close-fullscreen" id="closeFullscreen">&times;</span>
+        <button class="nav-btn prev" id="prevImage">&#10094;</button>
+        <img src="" alt="Full-Screen Image" id="fullscreenImage">
+        <button class="nav-btn next" id="nextImage">&#10095;</button>
+      </div>
+    
       
       <!-- Add more gallery-cards as needed -->
     </div>
     
     
     </section>
+<script>
+  const galleries = {
+      gallerybit: [
+        'https://github.com/TheSensors/thesensorsgallery/blob/main/bit1.jpeg?raw=true',
+        'https://github.com/TheSensors/thesensorsgallery/blob/main/bit2.jpeg?raw=true',
+        'https://github.com/TheSensors/thesensorsgallery/blob/main/bit3.jpeg?raw=true',
+        'https://github.com/TheSensors/thesensorsgallery/blob/main/bit4.jpeg?raw=true',
+        'https://github.com/TheSensors/thesensorsgallery/blob/main/bit7.jpeg?raw=true',
+        'https://github.com/TheSensors/thesensorsgallery/blob/main/bit5.jpeg?raw=true',
+        'https://github.com/TheSensors/thesensorsgallery/blob/main/bit6.jpeg?raw=true',
+        'https://github.com/TheSensors/thesensorsgallery/blob/main/bit4.jpeg?raw=true'
+      ],
+      gallerysih: [
+        'https://github.com/TheSensors/thesensorsgallery/blob/main/bannersih.jpg?raw=true',
+        'https://github.com/TheSensors/thesensorsgallery/blob/main/sih2.JPG?raw=true',
+        'https://github.com/TheSensors/thesensorsgallery/blob/main/sih3.jpg?raw=true',
+        'https://github.com/TheSensors/thesensorsgallery/blob/main/sih4.jpg?raw=true',
+        'https://github.com/TheSensors/thesensorsgallery/blob/main/sih5.jpg?raw=true',
+        'https://github.com/TheSensors/thesensorsgallery/blob/main/sih6.jpg?raw=true',
+        'https://github.com/TheSensors/thesensorsgallery/blob/main/sih2.JPG?raw=true',
+        'https://github.com/TheSensors/thesensorsgallery/blob/main/sih3.jpg?raw=true'
+      ],
+      galleryiit: [
+        'https://github.com/TheSensors/thesensorsgallery/blob/main/iit1.jpg?raw=true',
+        'https://github.com/TheSensors/thesensorsgallery/blob/main/iit2.jpg?raw=true',
+        'https://github.com/TheSensors/thesensorsgallery/blob/main/iit3.jpg?raw=true',
+        'https://github.com/TheSensors/thesensorsgallery/blob/main/iit4.jpg?raw=true',
+        'https://github.com/TheSensors/thesensorsgallery/blob/main/iit5.jpg?raw=true',
+        'https://github.com/TheSensors/thesensorsgallery/blob/main/iit6.jpg?raw=true',
+        'https://github.com/TheSensors/thesensorsgallery/blob/main/iit7.jpg?raw=true',
+        'https://github.com/TheSensors/thesensorsgallery/blob/main/iit8.jpg?raw=true'
+      ]
+    };
 
+    let currentGallery = [];
+    let currentIndex = 0;
+    let autoScrollInterval;
+    let isPaused = false;
+
+    const thumbnailModal = document.getElementById('thumbnailModal');
+    const fullscreenModal = document.getElementById('fullscreenModal');
+    const modalContent = thumbnailModal.querySelector('.modal-content');
+    const fullscreenImage = document.getElementById('fullscreenImage');
+    const closeThumbnail = document.getElementById('closeThumbnail');
+    const closeFullscreen = document.getElementById('closeFullscreen');
+    const prevImageBtn = document.getElementById('prevImage');
+    const nextImageBtn = document.getElementById('nextImage');
+
+    // Load Thumbnails into the Modal
+    const loadThumbnails = () => {
+      modalContent.innerHTML = '';
+      currentGallery.forEach((imgSrc, index) => {
+        const img = document.createElement('img');
+        img.src = imgSrc;
+        img.dataset.index = index;
+        img.onclick = () => openFullscreen(index);
+        modalContent.appendChild(img);
+      });
+    };
+
+    // Open Thumbnail Modal
+    const openGallery = (galleryKey) => {
+      currentGallery = galleries[galleryKey];
+      loadThumbnails();
+      thumbnailModal.style.display = 'block';
+    };
+
+    // Close Thumbnail Modal
+    closeThumbnail.onclick = () => {
+      thumbnailModal.style.display = 'none';
+    };
+
+    // Open Full-Screen Modal
+    const openFullscreen = (index) => {
+      currentIndex = index;
+      fullscreenImage.src = currentGallery[index];
+      fullscreenModal.style.display = 'flex';
+      startAutoScroll();
+    };
+
+    // Close Full-Screen Modal
+    closeFullscreen.onclick = () => {
+      fullscreenModal.style.display = 'none';
+      stopAutoScroll();
+    };
+
+    // Navigate to the Previous Image
+    const showPrevImage = () => {
+      currentIndex = (currentIndex - 1 + currentGallery.length) % currentGallery.length;
+      fullscreenImage.src = currentGallery[currentIndex];
+    };
+
+    // Navigate to the Next Image
+    const showNextImage = () => {
+      currentIndex = (currentIndex + 1) % currentGallery.length;
+      fullscreenImage.src = currentGallery[currentIndex];
+    };
+
+    // Add Event Listeners for Navigation Buttons
+    prevImageBtn.onclick = showPrevImage;
+    nextImageBtn.onclick = showNextImage;
+
+    // Start Auto-Scroll
+    const startAutoScroll = () => {
+      isPaused = false;
+      autoScrollInterval = setInterval(() => {
+        if (!isPaused) {
+          showNextImage();
+        }
+      }, 3000);
+    };
+
+    // Stop Auto-Scroll
+    const stopAutoScroll = () => {
+      clearInterval(autoScrollInterval);
+    };
+
+    // Toggle Pause/Resume on Full-Screen Image Click
+    fullscreenImage.onclick = () => {
+      isPaused = !isPaused;
+    };
+
+    // Event Listener for Buttons
+    document.querySelectorAll('.open-gallery-btn').forEach((button) => {
+      button.onclick = () => openGallery(button.dataset.gallery);
+    });
+
+    // Close Modals on Outside Click
+    window.onclick = (e) => {
+      if (e.target === thumbnailModal) {
+        thumbnailModal.style.display = 'none';
+      } else if (e.target === fullscreenModal) {
+        fullscreenModal.style.display = 'none';
+        stopAutoScroll();
+      }
+    };
+
+</script>
     <script type="text/javascript" src="script.js"></script>
     <script src="vanilla-tilt.js"></script>
     <script type="text/javascript" src="error.js"></script>
