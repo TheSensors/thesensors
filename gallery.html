@@ -1,27 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>The Sensors</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="icon" href="logo.png" type="image/x-icon" />
-    <link rel="stylesheet" href="font-awesome.css" />
-    <script src="new.js" type="text/javascript"></script>
-    <script
-      src="https://kit.fontawesome.com/16539b20e1.js"
-      crossorigin="anonymous"></script>
-    <style>
-      #loader {
-        position: fixed;
-        bottom: 1px;
-      }
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery-The Sensors</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="logo.png" type="image/x-icon" />
+  <link rel="stylesheet" href="font-awesome.css" />
+  <script src="new.js" type="text/javascript"></script>
+  <script src="https://kit.fontawesome.com/16539b20e1.js" crossorigin="anonymous"></script>
+  <style>
+    #loader {
+      position: fixed;
+      bottom: 1px;
+    }
 
     h1 {
       margin-bottom: 20px;
       font-size: 2rem;
       text-align: center;
     }
+
     /* Modal for Thumbnail Gallery */
     .modal {
       display: none;
@@ -98,6 +98,7 @@
       from {
         opacity: 0;
       }
+
       to {
         opacity: 1;
       }
@@ -144,119 +145,125 @@
     .fullscreen .next {
       right: 20px;
     }
-    </style>
-  </head>
-  <body>
-    <div id="loader"></div>
+  </style>
+</head>
 
-    <section class="header">
-      <video autoplay muted loop plays-inline class="video">
-        <source src="video.mp4" type="video/mp4" />
-      </video>
-      <div class="navigation-container">
-        <div class="help">
-          <a href="home.html"><img src="logo.jpg" alt="help" /></a>
+<body>
+  <div id="loader"></div>
+
+  <section class="header">
+    <video autoplay muted loop plays-inline class="video">
+      <source src="video.mp4" type="video/mp4" />
+    </video>
+    <div class="navigation-container">
+      <div class="help">
+        <a href="home.html"><img src="logo.jpg" alt="help" /></a>
+      </div>
+      <div class="headline">
+        THE SENSORS
+      </div>
+      <div class="navbar">
+        <div class="container">
+          <div class="btn"><a href="home.html">HOME</a></div>
         </div>
-        <div class="headline"> 
-          THE SENSORS
+        <div class="container">
+          <div class="btn"><a href="about.html">ABOUT</a></div>
         </div>
-        <div class="navbar">
-          <div class="container">
-            <div class="btn"><a href="home.html">HOME</a></div>
-          </div>
-          <div class="container">
-            <div class="btn"><a href="about.html">ABOUT</a></div>
-          </div>
-          <div class="container">
-            <div class="btn"><a href="project.html">PROJECT</a></div>
-          </div>
-          <div class="container">
-            <div class="btn"><a href="member.html">MEMBERS</a></div>
-          </div>
-          <div class="container">
-            <div class="btn"><a href="gallery.html">GALLERY</a></div>
-          </div>
-          <div class="container">
-            <div class="btn"><a href="contact.html">CONTACT</a></div>
-          </div>
+        <div class="container">
+          <div class="btn"><a href="project.html">PROJECT</a></div>
         </div>
-        <div class="mobile-menu-icon">
-          <i
-            class="fa fa-bars"
-            id="hamburger"
-            style="font-size: xx-large; padding-top: 15px"></i>
-          <i
-            class="fa fa-times"
-            style="font-size: xx-large; padding-top: 15px"
-            id="cross"
-            style="display: none"></i>
+        <div class="container">
+          <div class="btn"><a href="member.html">MEMBERS</a></div>
+        </div>
+        <div class="container">
+          <div class="btn"><a href="gallery.html">GALLERY</a></div>
+        </div>
+        <div class="container">
+          <div class="btn"><a href="contact.html">CONTACT</a></div>
         </div>
       </div>
-
-      <div class="nav-links">
-        <div class="container"><a href="home.html">HOME</a></div>
-        <div class="container"><a href="about.html">ABOUT</a></div>
-        <div class="container"><a href="project.html">PROJECT</a></div>
-        <div class="container"><a href="member.html">MEMBERS</a></div>
-        <div class="container"><a href="gallery.html">GALLERY</a></div>
-        <div class="container"><a href="contact.html">CONTACT</a></div>
+      <div class="mobile-menu-icon">
+        <i class="fa fa-bars" id="hamburger" style="font-size: xx-large; padding-top: 15px"></i>
+        <i class="fa fa-times" style="font-size: xx-large; padding-top: 15px" id="cross" style="display: none"></i>
       </div>
-    </section>
-
-    <div class="error-container" id="errorContainer">
-      <h1>404 - Internet Connection Lost</h1>
-      <p>It seems like you've lost your internet connection.</p>
-      <button class="retry-btn" onclick="reloadPage()">Reload</button>
     </div>
 
-    <div class="text-box2">
-      <h1>Gallery</h1>
+    <div class="nav-links">
+      <div class="container"><a href="home.html">HOME</a></div>
+      <div class="container"><a href="about.html">ABOUT</a></div>
+      <div class="container"><a href="project.html">PROJECT</a></div>
+      <div class="container"><a href="member.html">MEMBERS</a></div>
+      <div class="container"><a href="gallery.html">GALLERY</a></div>
+      <div class="container"><a href="contact.html">CONTACT</a></div>
     </div>
+  </section>
 
-    <div class="gallery-main">
-      <div class="gallery-card">
-        <div class="gallery-card-image-container">
-          <img src="https://github.com/TheSensors/thesensorsgallery/blob/main/bitbanner.jpg?raw=true" alt="Video Icon" class="video-icon-img" />
-        </div>
-        <p class="gallery-card-title">Project Representation at BIT Patna on Space Day.</p>
-        <div class="gallery-card-btn">
-          <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 384 512" stroke-width="0" fill="currentColor" stroke="currentColor">
-            <path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"></path>
-            <p><a class="open-gallery-btn" data-gallery="gallerybit">View Photos</a></p>
-          </svg>
-        </div>
+  <div class="error-container" id="errorContainer">
+    <h1>404 - Internet Connection Lost</h1>
+    <p>It seems like you've lost your internet connection.</p>
+    <button class="retry-btn" onclick="reloadPage()">Reload</button>
+  </div>
+
+  <div class="text-box2">
+    <h1>Gallery</h1>
+  </div>
+
+  <div class="gallery-main">
+    <div class="gallery-card">
+      <div class="gallery-card-image-container">
+        <img src="https://github.com/TheSensors/thesensorsgallery/blob/main/bitbanner.jpg?raw=true" alt="Video Icon"
+          class="video-icon-img" />
       </div>
-      <div class="gallery-card">
-        <div class="gallery-card-image-container">
-          <img src="https://github.com/TheSensors/thesensorsgallery/blob/main/bannersih.jpg?raw=true" alt="Video Icon" class="video-icon-img" />
-        </div>
-        <p class="gallery-card-title">Presenting our Prototype in Internal Hackathon of SIH 2024.</p>
-        <div class="gallery-card-btn">
-          <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 384 512" stroke-width="0" fill="currentColor" stroke="currentColor">
-            <path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"></path>
-            <p><a class="open-gallery-btn" data-gallery="gallerysih">View Photos</a></p>
-          </svg>
-        </div>
+      <p class="gallery-card-title">Project Representation at BIT Patna on Space Day.</p>
+      <div class="gallery-card-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 384 512" stroke-width="0"
+          fill="currentColor" stroke="currentColor">
+          <path
+            d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z">
+          </path>
+          <p><a class="open-gallery-btn" data-gallery="gallerybit">View Photos</a></p>
+        </svg>
       </div>
-      <div class="gallery-card">
-        <div class="gallery-card-image-container">
-          <img src="https://github.com/TheSensors/thesensorsgallery/blob/main/iitbanner.jpg?raw=true" alt="Video Icon" class="video-icon-img" />
-        </div>
-        <p class="gallery-card-title">Four day workshop on Nanotechnology at IIT Patna.</p>
-        <div class="gallery-card-btn">
-          <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 384 512" stroke-width="0" fill="currentColor" stroke="currentColor">
-            <path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"></path>
-            <p><a class="open-gallery-btn" data-gallery="galleryiit">View Photos</a></p>
-          </svg>
-        </div>
+    </div>
+    <div class="gallery-card">
+      <div class="gallery-card-image-container">
+        <img src="https://github.com/TheSensors/thesensorsgallery/blob/main/bannersih.jpg?raw=true" alt="Video Icon"
+          class="video-icon-img" />
       </div>
-      <div class="button-container">
+      <p class="gallery-card-title">Presenting our Prototype in Internal Hackathon of SIH 2024.</p>
+      <div class="gallery-card-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 384 512" stroke-width="0"
+          fill="currentColor" stroke="currentColor">
+          <path
+            d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z">
+          </path>
+          <p><a class="open-gallery-btn" data-gallery="gallerysih">View Photos</a></p>
+        </svg>
+      </div>
+    </div>
+    <div class="gallery-card">
+      <div class="gallery-card-image-container">
+        <img src="https://github.com/TheSensors/thesensorsgallery/blob/main/iitbanner.jpg?raw=true" alt="Video Icon"
+          class="video-icon-img" />
+      </div>
+      <p class="gallery-card-title">Four day workshop on Nanotechnology at IIT Patna.</p>
+      <div class="gallery-card-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 384 512" stroke-width="0"
+          fill="currentColor" stroke="currentColor">
+          <path
+            d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z">
+          </path>
+          <p><a class="open-gallery-btn" data-gallery="galleryiit">View Photos</a></p>
+        </svg>
+      </div>
+    </div>
+    <div class="button-container">
       <!-- Modal for Thumbnail Gallery -->
       <div class="modal" id="thumbnailModal">
         <span class="close" id="closeThumbnail">&times;</span>
         <div class="modal-content"></div>
       </div>
-    
+
       <!-- Full-Screen Image Viewer -->
       <div class="fullscreen" id="fullscreenModal">
         <span class="close-fullscreen" id="closeFullscreen">&times;</span>
@@ -264,154 +271,155 @@
         <img src="" alt="Full-Screen Image" id="fullscreenImage">
         <button class="nav-btn next" id="nextImage">&#10095;</button>
       </div>
-    
-      
+
+
       <!-- Add more gallery-cards as needed -->
     </div>
-    
-    
+
+
     </section>
-<script>
-  const galleries = {
-      gallerybit: [
-        'https://github.com/TheSensors/thesensorsgallery/blob/main/bit1.jpeg?raw=true',
-        'https://github.com/TheSensors/thesensorsgallery/blob/main/bit2.jpeg?raw=true',
-        'https://github.com/TheSensors/thesensorsgallery/blob/main/bit3.jpeg?raw=true',
-        'https://github.com/TheSensors/thesensorsgallery/blob/main/bit4.jpeg?raw=true',
-        'https://github.com/TheSensors/thesensorsgallery/blob/main/bit7.jpeg?raw=true',
-        'https://github.com/TheSensors/thesensorsgallery/blob/main/bit5.jpeg?raw=true',
-        'https://github.com/TheSensors/thesensorsgallery/blob/main/bit6.jpeg?raw=true',
-        'https://github.com/TheSensors/thesensorsgallery/blob/main/bit4.jpeg?raw=true'
-      ],
-      gallerysih: [
-        'https://github.com/TheSensors/thesensorsgallery/blob/main/bannersih.jpg?raw=true',
-        'https://github.com/TheSensors/thesensorsgallery/blob/main/sih2.JPG?raw=true',
-        'https://github.com/TheSensors/thesensorsgallery/blob/main/sih3.jpg?raw=true',
-        'https://github.com/TheSensors/thesensorsgallery/blob/main/sih4.jpg?raw=true',
-        'https://github.com/TheSensors/thesensorsgallery/blob/main/sih5.jpg?raw=true',
-        'https://github.com/TheSensors/thesensorsgallery/blob/main/sih6.jpg?raw=true',
-        'https://github.com/TheSensors/thesensorsgallery/blob/main/sih2.JPG?raw=true',
-        'https://github.com/TheSensors/thesensorsgallery/blob/main/sih3.jpg?raw=true'
-      ],
-      galleryiit: [
-        'https://github.com/TheSensors/thesensorsgallery/blob/main/iit1.jpg?raw=true',
-        'https://github.com/TheSensors/thesensorsgallery/blob/main/iit2.jpg?raw=true',
-        'https://github.com/TheSensors/thesensorsgallery/blob/main/iit3.jpg?raw=true',
-        'https://github.com/TheSensors/thesensorsgallery/blob/main/iit4.jpg?raw=true',
-        'https://github.com/TheSensors/thesensorsgallery/blob/main/iit5.jpg?raw=true',
-        'https://github.com/TheSensors/thesensorsgallery/blob/main/iit6.jpg?raw=true',
-        'https://github.com/TheSensors/thesensorsgallery/blob/main/iit7.jpg?raw=true',
-        'https://github.com/TheSensors/thesensorsgallery/blob/main/iit8.jpg?raw=true'
-      ]
-    };
+    <script>
+      const galleries = {
+        gallerybit: [
+          'https://github.com/TheSensors/thesensorsgallery/blob/main/bit1.jpeg?raw=true',
+          'https://github.com/TheSensors/thesensorsgallery/blob/main/bit2.jpeg?raw=true',
+          'https://github.com/TheSensors/thesensorsgallery/blob/main/bit3.jpeg?raw=true',
+          'https://github.com/TheSensors/thesensorsgallery/blob/main/bit4.jpeg?raw=true',
+          'https://github.com/TheSensors/thesensorsgallery/blob/main/bit7.jpeg?raw=true',
+          'https://github.com/TheSensors/thesensorsgallery/blob/main/bit5.jpeg?raw=true',
+          'https://github.com/TheSensors/thesensorsgallery/blob/main/bit6.jpeg?raw=true',
+          'https://github.com/TheSensors/thesensorsgallery/blob/main/bit4.jpeg?raw=true'
+        ],
+        gallerysih: [
+          'https://github.com/TheSensors/thesensorsgallery/blob/main/bannersih.jpg?raw=true',
+          'https://github.com/TheSensors/thesensorsgallery/blob/main/sih2.JPG?raw=true',
+          'https://github.com/TheSensors/thesensorsgallery/blob/main/sih3.jpg?raw=true',
+          'https://github.com/TheSensors/thesensorsgallery/blob/main/sih4.jpg?raw=true',
+          'https://github.com/TheSensors/thesensorsgallery/blob/main/sih5.jpg?raw=true',
+          'https://github.com/TheSensors/thesensorsgallery/blob/main/sih6.jpg?raw=true',
+          'https://github.com/TheSensors/thesensorsgallery/blob/main/sih2.JPG?raw=true',
+          'https://github.com/TheSensors/thesensorsgallery/blob/main/sih3.jpg?raw=true'
+        ],
+        galleryiit: [
+          'https://github.com/TheSensors/thesensorsgallery/blob/main/iit1.jpg?raw=true',
+          'https://github.com/TheSensors/thesensorsgallery/blob/main/iit2.jpg?raw=true',
+          'https://github.com/TheSensors/thesensorsgallery/blob/main/iit3.jpg?raw=true',
+          'https://github.com/TheSensors/thesensorsgallery/blob/main/iit4.jpg?raw=true',
+          'https://github.com/TheSensors/thesensorsgallery/blob/main/iit5.jpg?raw=true',
+          'https://github.com/TheSensors/thesensorsgallery/blob/main/iit6.jpg?raw=true',
+          'https://github.com/TheSensors/thesensorsgallery/blob/main/iit7.jpg?raw=true',
+          'https://github.com/TheSensors/thesensorsgallery/blob/main/iit8.jpg?raw=true'
+        ]
+      };
 
-    let currentGallery = [];
-    let currentIndex = 0;
-    let autoScrollInterval;
-    let isPaused = false;
+      let currentGallery = [];
+      let currentIndex = 0;
+      let autoScrollInterval;
+      let isPaused = false;
 
-    const thumbnailModal = document.getElementById('thumbnailModal');
-    const fullscreenModal = document.getElementById('fullscreenModal');
-    const modalContent = thumbnailModal.querySelector('.modal-content');
-    const fullscreenImage = document.getElementById('fullscreenImage');
-    const closeThumbnail = document.getElementById('closeThumbnail');
-    const closeFullscreen = document.getElementById('closeFullscreen');
-    const prevImageBtn = document.getElementById('prevImage');
-    const nextImageBtn = document.getElementById('nextImage');
+      const thumbnailModal = document.getElementById('thumbnailModal');
+      const fullscreenModal = document.getElementById('fullscreenModal');
+      const modalContent = thumbnailModal.querySelector('.modal-content');
+      const fullscreenImage = document.getElementById('fullscreenImage');
+      const closeThumbnail = document.getElementById('closeThumbnail');
+      const closeFullscreen = document.getElementById('closeFullscreen');
+      const prevImageBtn = document.getElementById('prevImage');
+      const nextImageBtn = document.getElementById('nextImage');
 
-    // Load Thumbnails into the Modal
-    const loadThumbnails = () => {
-      modalContent.innerHTML = '';
-      currentGallery.forEach((imgSrc, index) => {
-        const img = document.createElement('img');
-        img.src = imgSrc;
-        img.dataset.index = index;
-        img.onclick = () => openFullscreen(index);
-        modalContent.appendChild(img);
-      });
-    };
+      // Load Thumbnails into the Modal
+      const loadThumbnails = () => {
+        modalContent.innerHTML = '';
+        currentGallery.forEach((imgSrc, index) => {
+          const img = document.createElement('img');
+          img.src = imgSrc;
+          img.dataset.index = index;
+          img.onclick = () => openFullscreen(index);
+          modalContent.appendChild(img);
+        });
+      };
 
-    // Open Thumbnail Modal
-    const openGallery = (galleryKey) => {
-      currentGallery = galleries[galleryKey];
-      loadThumbnails();
-      thumbnailModal.style.display = 'block';
-    };
+      // Open Thumbnail Modal
+      const openGallery = (galleryKey) => {
+        currentGallery = galleries[galleryKey];
+        loadThumbnails();
+        thumbnailModal.style.display = 'block';
+      };
 
-    // Close Thumbnail Modal
-    closeThumbnail.onclick = () => {
-      thumbnailModal.style.display = 'none';
-    };
-
-    // Open Full-Screen Modal
-    const openFullscreen = (index) => {
-      currentIndex = index;
-      fullscreenImage.src = currentGallery[index];
-      fullscreenModal.style.display = 'flex';
-      startAutoScroll();
-    };
-
-    // Close Full-Screen Modal
-    closeFullscreen.onclick = () => {
-      fullscreenModal.style.display = 'none';
-      stopAutoScroll();
-    };
-
-    // Navigate to the Previous Image
-    const showPrevImage = () => {
-      currentIndex = (currentIndex - 1 + currentGallery.length) % currentGallery.length;
-      fullscreenImage.src = currentGallery[currentIndex];
-    };
-
-    // Navigate to the Next Image
-    const showNextImage = () => {
-      currentIndex = (currentIndex + 1) % currentGallery.length;
-      fullscreenImage.src = currentGallery[currentIndex];
-    };
-
-    // Add Event Listeners for Navigation Buttons
-    prevImageBtn.onclick = showPrevImage;
-    nextImageBtn.onclick = showNextImage;
-
-    // Start Auto-Scroll
-    const startAutoScroll = () => {
-      isPaused = false;
-      autoScrollInterval = setInterval(() => {
-        if (!isPaused) {
-          showNextImage();
-        }
-      }, 3000);
-    };
-
-    // Stop Auto-Scroll
-    const stopAutoScroll = () => {
-      clearInterval(autoScrollInterval);
-    };
-
-    // Toggle Pause/Resume on Full-Screen Image Click
-    fullscreenImage.onclick = () => {
-      isPaused = !isPaused;
-    };
-
-    // Event Listener for Buttons
-    document.querySelectorAll('.open-gallery-btn').forEach((button) => {
-      button.onclick = () => openGallery(button.dataset.gallery);
-    });
-
-    // Close Modals on Outside Click
-    window.onclick = (e) => {
-      if (e.target === thumbnailModal) {
+      // Close Thumbnail Modal
+      closeThumbnail.onclick = () => {
         thumbnailModal.style.display = 'none';
-      } else if (e.target === fullscreenModal) {
+      };
+
+      // Open Full-Screen Modal
+      const openFullscreen = (index) => {
+        currentIndex = index;
+        fullscreenImage.src = currentGallery[index];
+        fullscreenModal.style.display = 'flex';
+        startAutoScroll();
+      };
+
+      // Close Full-Screen Modal
+      closeFullscreen.onclick = () => {
         fullscreenModal.style.display = 'none';
         stopAutoScroll();
-      }
-    };
+      };
 
-</script>
+      // Navigate to the Previous Image
+      const showPrevImage = () => {
+        currentIndex = (currentIndex - 1 + currentGallery.length) % currentGallery.length;
+        fullscreenImage.src = currentGallery[currentIndex];
+      };
+
+      // Navigate to the Next Image
+      const showNextImage = () => {
+        currentIndex = (currentIndex + 1) % currentGallery.length;
+        fullscreenImage.src = currentGallery[currentIndex];
+      };
+
+      // Add Event Listeners for Navigation Buttons
+      prevImageBtn.onclick = showPrevImage;
+      nextImageBtn.onclick = showNextImage;
+
+      // Start Auto-Scroll
+      const startAutoScroll = () => {
+        isPaused = false;
+        autoScrollInterval = setInterval(() => {
+          if (!isPaused) {
+            showNextImage();
+          }
+        }, 3000);
+      };
+
+      // Stop Auto-Scroll
+      const stopAutoScroll = () => {
+        clearInterval(autoScrollInterval);
+      };
+
+      // Toggle Pause/Resume on Full-Screen Image Click
+      fullscreenImage.onclick = () => {
+        isPaused = !isPaused;
+      };
+
+      // Event Listener for Buttons
+      document.querySelectorAll('.open-gallery-btn').forEach((button) => {
+        button.onclick = () => openGallery(button.dataset.gallery);
+      });
+
+      // Close Modals on Outside Click
+      window.onclick = (e) => {
+        if (e.target === thumbnailModal) {
+          thumbnailModal.style.display = 'none';
+        } else if (e.target === fullscreenModal) {
+          fullscreenModal.style.display = 'none';
+          stopAutoScroll();
+        }
+      };
+
+    </script>
     <script type="text/javascript" src="script.js"></script>
     <script src="vanilla-tilt.js"></script>
     <script type="text/javascript" src="error.js"></script>
     <script src="https://kit.fontawesome.com/16539b20e1.js" crossorigin="anonymous"></script>
-  </body>
+</body>
+
 </html>

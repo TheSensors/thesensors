@@ -1,130 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>The Sensors</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="icon" href="logo.jpg" type="image/x-icon" />
-    <link rel="stylesheet" href="font-awesome.css" />
-    <script src="new.js" type="text/javascript"></script>
-    <script
-      src="https://kit.fontawesome.com/16539b20e1.js"
-      crossorigin="anonymous"></script>
-  </head>
-  <style>
-    #loader {
-      height: 100%;
-      width: 100%;
-      position: absolute;
-      top: 0;
-    }
-  </style>
-  <body>
-    <div id="loader"></div>
 
-    <section class="header">
-      <video autoplay muted loop plays-inline class="video">
-        <source src="video.mp4" type="video/mp4" />
-      </video>
-      <div class="navigation-container">
-        <div class="help">
-          <a href="home.html"><img src="logo.jpg" alt="help" /></a>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects-The Sensors</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="logo.jpg" type="image/x-icon" />
+  <link rel="stylesheet" href="font-awesome.css" />
+  <script src="new.js" type="text/javascript"></script>
+  <script src="https://kit.fontawesome.com/16539b20e1.js" crossorigin="anonymous"></script>
+</head>
+<style>
+  #loader {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+  }
+</style>
+
+<body>
+  <div id="loader"></div>
+
+  <section class="header">
+    <video autoplay muted loop plays-inline class="video">
+      <source src="video.mp4" type="video/mp4" />
+    </video>
+    <div class="navigation-container">
+      <div class="help">
+        <a href="home.html"><img src="logo.jpg" alt="help" /></a>
+      </div>
+      <div class="headline">
+        THE SENSORS
+      </div>
+      <div class="navbar">
+        <div class="container">
+          <div class="btn"><a href="home.html">HOME</a></div>
         </div>
-        <div class="headline"> 
-          THE SENSORS
+        <div class="container">
+          <div class="btn"><a href="about.html">ABOUT</a></div>
         </div>
-        <div class="navbar">
-          <div class="container">
-            <div class="btn"><a href="home.html">HOME</a></div>
-          </div>
-          <div class="container">
-            <div class="btn"><a href="about.html">ABOUT</a></div>
-          </div>
-          <div class="container">
-            <div class="btn"><a href="project.html">PROJECT</a></div>
-          </div>
-          <div class="container">
-            <div class="btn"><a href="member.html">MEMBERS</a></div>
-          </div>
-          <div class="container">
-            <div class="btn"><a href="gallery.html">GALLERY</a></div>
-          </div>
-          <div class="container">
-            <div class="btn"><a href="contact.html">CONTACT</a></div>
-          </div>
+        <div class="container">
+          <div class="btn"><a href="project.html">PROJECT</a></div>
         </div>
-        <div class="mobile-menu-icon">
-          <i
-            class="fa fa-bars"
-            id="hamburger"
-            style="font-size: xx-large; padding-top: 15px"></i>
-          <i
-            class="fa fa-times"
-            style="font-size: xx-large; padding-top: 15px"
-            id="cross"
-            style="display: none"></i>
+        <div class="container">
+          <div class="btn"><a href="member.html">MEMBERS</a></div>
+        </div>
+        <div class="container">
+          <div class="btn"><a href="gallery.html">GALLERY</a></div>
+        </div>
+        <div class="container">
+          <div class="btn"><a href="contact.html">CONTACT</a></div>
         </div>
       </div>
-
-      <div class="nav-links">
-        <div class="container"><a href="home.html">HOME</a></div>
-        <div class="container"><a href="about.html">ABOUT</a></div>
-        <div class="container"><a href="project.html">PROJECT</a></div>
-        <div class="container"><a href="member.html">MEMBERS</a></div>
-        <div class="container"><a href="gallery.html">GALLERY</a></div>
-        <div class="container"><a href="contact.html">CONTACT</a></div>
+      <div class="mobile-menu-icon">
+        <i class="fa fa-bars" id="hamburger" style="font-size: xx-large; padding-top: 15px"></i>
+        <i class="fa fa-times" style="font-size: xx-large; padding-top: 15px" id="cross" style="display: none"></i>
       </div>
-    </section>
-
-    <div class="error-container" id="errorContainer">
-      <h1>404 - Internet Connection Lost</h1>
-      <p>It seems like you've lost your internet connection.</p>
-      <button class="retry-btn" onclick="reloadPage()">Reload</button>
     </div>
 
-    <div class="text-box2">
-      <h1>Projects</h1>
+    <div class="nav-links">
+      <div class="container"><a href="home.html">HOME</a></div>
+      <div class="container"><a href="about.html">ABOUT</a></div>
+      <div class="container"><a href="project.html">PROJECT</a></div>
+      <div class="container"><a href="member.html">MEMBERS</a></div>
+      <div class="container"><a href="gallery.html">GALLERY</a></div>
+      <div class="container"><a href="contact.html">CONTACT</a></div>
     </div>
+  </section>
 
-      <div class="project">
-        <div class="project_card">
-          <div class="content">
-            <h2>Space Rover Model</h2>
-            <p>
-              Space rovers are fascinating! They are robotic vehicles designed
-              to explore the surface of other planets, moons, or celestial
-              bodies.
-            </p>
-            <a
-              href="https://drive.google.com/file/d/142oa2xXN14mmfRhzoN8nkILqiS83mbQQ/view?usp=drive_link">
-              View Detail
-            </a>
-            <a
-              href="https://drive.google.com/file/d/1jIiD0T58DJeq8IM7sbZGkFtbl__9CuGb/view?usp=drive_link">
-              View Code
-            </a>
-          </div>
-          <div>
-            <img src="https://github.com/TheSensors/thesensorsproject/blob/main/project%201.png?raw=true" />
-          </div>
-        </div>
-      </div>
-      
-      
-      
-    
-      <div class="project-add">
-        <i class="fa-solid fa-file-circle-plus"></i>
-        <p><a href="https://forms.gle/wVddDGywesxeDxm26">Add Your Project</a></p>
-      </div>
-      
-      
-    </section>
+  <div class="error-container" id="errorContainer">
+    <h1>404 - Internet Connection Lost</h1>
+    <p>It seems like you've lost your internet connection.</p>
+    <button class="retry-btn" onclick="reloadPage()">Reload</button>
+  </div>
 
-    <script type="text/javascript" src="script.js"></script>
-    <script src="vanilla-tilt.js"></script>
-    <script type="text/javascript" src="error.js"></script>
-    <script src="https://kit.fontawesome.com/16539b20e1.js" crossorigin="anonymous"></script>
-  </body>
+  <div class="text-box2">
+    <h1>Projects</h1>
+  </div>
+
+  <div class="project">
+    <div class="project_card">
+      <div class="content">
+        <h2>Space Rover Model</h2>
+        <p>
+          Space rovers are fascinating! They are robotic vehicles designed
+          to explore the surface of other planets, moons, or celestial
+          bodies.
+        </p>
+        <a href="https://drive.google.com/file/d/142oa2xXN14mmfRhzoN8nkILqiS83mbQQ/view?usp=drive_link">
+          View Detail
+        </a>
+        <a href="https://drive.google.com/file/d/1jIiD0T58DJeq8IM7sbZGkFtbl__9CuGb/view?usp=drive_link">
+          View Code
+        </a>
+      </div>
+      <div>
+        <img src="https://github.com/TheSensors/thesensorsproject/blob/main/project%201.png?raw=true" />
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <div class="project-add">
+    <i class="fa-solid fa-file-circle-plus"></i>
+    <p><a href="https://forms.gle/wVddDGywesxeDxm26">Add Your Project</a></p>
+  </div>
+
+
+  </section>
+
+  <script type="text/javascript" src="script.js"></script>
+  <script src="vanilla-tilt.js"></script>
+  <script type="text/javascript" src="error.js"></script>
+  <script src="https://kit.fontawesome.com/16539b20e1.js" crossorigin="anonymous"></script>
+</body>
+
 </html>
