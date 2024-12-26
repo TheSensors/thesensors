@@ -37,7 +37,7 @@ body {
   display: flex;
   justify-content: space-between;
   padding: 10px;
-  margin-left: 120px;
+  margin-left: 90px;
   margin-right: 120px;
 }
 .nav-links .help{
@@ -175,7 +175,6 @@ nav-links a:hover {
 .container {
   display: inline-block;
   justify-content: space-between;
-  width: 200px;
 }
 
 .container .btn {
@@ -183,7 +182,7 @@ nav-links a:hover {
   margin: 20px;
   margin-bottom: 40px;
   position: relative;
-  width: 155px;
+  width: 140px;
 }
 
 .container .btn a {
@@ -195,7 +194,7 @@ nav-links a:hover {
   box-shadow: 0 15px 35px rgba(255, 255, 255, 0.2);
   color: #fff;
   display: flex;
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 700;
   left: 0;
   top: 0;
